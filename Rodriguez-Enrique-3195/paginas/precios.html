@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planes y Precios</title>
+  <link rel="stylesheet" href="../estilos/precio.css" />
+  <link rel="stylesheet" href="../estilos/menu-footer.css" />
+</head>
+<body>
+   <!-- Menu -->
+   <header class="main-header">
+    <div class="logo" ><a href="../index.html">🏋️ PowerFit</a></div>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li class="menu-item">       
+          <a href="clases.html">Clases</a>
+          <ul class="submenu">
+            <li><a href="clases.html#musculacion">Musculación</a></li>
+            <li><a href="clases.html#crossfit">CrossFit</a></li>
+            <li><a href="Clases.html">Yoga</a></li>
+            <li><a href="clases.html#spinning">Spinning</a></li>
+          </ul> 
+        </li>
+        <li><a href="entrenadores.html">Entrenadores</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+<!-- Seccion Precios-->
+  <section class="contenedor-precios">
+    <h2>Compará nuestros Planes</h2>
+
+    <!-- Toggle mensual/anual -->
+    <div class="toggle">
+      <input type="checkbox" id="switch-precios">
+      <label for="switch-precios">Anual / Mensual</label>
+    </div>
+
+    <!-- Tabla de precios -->
+    <div class="planes">
+      <div class="plan">
+        <h3>Básico</h3>
+        <p class="precio" data-mensual="8000" data-anual="72000">$8000</p>
+        <ul>
+          <li>Acceso libre <span class="tooltip" data-tooltip="Accedé sin límite de horario.">?</span></li>
+          <li>1 clase grupal semanal</li>
+          <li>Sin entrenador personalizado</li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+
+      <div class="plan destacado">
+        <h3>Estándar</h3>
+        <p class="precio" data-mensual="12000" data-anual="100000">$12000</p>
+        <ul>
+          <li>Acceso completo</li>
+          <li>3 clases grupales por semana</li>
+          <li>1 consulta con entrenador</li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+
+      <div class="plan">
+        <h3>Premium</h3>
+        <p class="precio" data-mensual="18000" data-anual="160000">$18000</p>
+        <ul>
+          <li>Acceso 24/7</li>
+          <li>Clases ilimitadas</li>
+          <li>Plan nutricional</li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById("switch-precios");
+    const precios = document.querySelectorAll(".precio");
+
+    toggle.addEventListener("change", () => {
+      precios.forEach(precio => {
+        const mensual = precio.dataset.mensual;
+        const anual = precio.dataset.anual;
+        precio.textContent = toggle.checked ? `$${anual}` : `$${mensual}`;
+      });
+    });
+  </script>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-contenido">
+
+    <div class="newsletter">
+      <h3>Suscribite al Newsletter</h3>
+      <form class="form-newsletter">
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <h3>Seguinos</h3>
+      <div class="iconos-redes">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="YouTube">📺</a>
+      </div>
+    </div>
+
+    <div class="mapa">
+      <h3>Encontranos</h3>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3078%2C-24.1977%2C-65.3022%2C-24.1933&layer=mapnik"
+        width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""
+        aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+  </div>
+
+  <div class="footer-final">
+    <p>&copy; 2025 Gimnasio PowerFit. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>

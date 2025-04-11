@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases | Gimnasio PowerFit</title>
+  <link rel="stylesheet" href="../estilos/clases.css">
+  <link rel="stylesheet" href="../estilos/menu-footer.css">
+</head>
+<body>
+   <!-- Menu -->
+   <header class="main-header">
+    <div class="logo" ><a href="../index.html">🏋️ PowerFit</a></div>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li class="menu-item">       
+          <a href="clases.html">Clases</a>
+          <ul class="submenu">
+            <li><a href="clases.html#musculacion">Musculación</a></li>
+            <li><a href="clases.html#crossfit">CrossFit</a></li>
+            <li><a href="Clases.html">Yoga</a></li>
+            <li><a href="clases.html#spinning">Spinning</a></li>
+          </ul> 
+        </li>
+        <li><a href="entrenadores.html">Entrenadores</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header> 
+
+  <main class="clases-main">
+    <!-- Seccion Filtros por Categoría -->
+    <section class="filtros">
+      <h2>Filtrar por Categoría</h2>
+      <div class="filtros-checkbox">
+        <input type="radio" id="todos" name="categoria" checked>
+        <label for="todos">Todos</label>
+
+        <input type="radio" id="musculacion" name="categoria">
+        <label for="musculacion">Musculación</label>
+
+        <input type="radio" id="crossfit" name="categoria">
+        <label for="crossfit">CrossFit</label>
+
+        <input type="radio" id="yoga" name="categoria">
+        <label for="yoga">Yoga</label>
+
+        <input type="radio" id="spinning" name="categoria">
+        <label for="spinning">Spinning</label>
+      </div>
+    </section>
+
+    <!-- Seccion Galería de Clases -->
+    <section class="galeria-clases">
+      <!-- Cada tarjeta tiene categoría en su class para los filtros -->
+      <div class="card-clase musculacion">
+        <img src="../sources/musculacion.jpg" alt="Musculación">
+        <div class="overlay">
+          <h3>Musculación</h3>
+        </div>
+      </div>
+
+      <div class="card-clase crossfit">
+        <img src="../sources/crossfit.jpg" alt="CrossFit">
+        <div class="overlay">
+          <h3>CrossFit</h3>
+        </div>
+      </div>
+
+      <div class="card-clase yoga">
+        <img src="../sources/yoga.jpg" alt="Yoga">
+        <div class="overlay">
+          <h3>Yoga</h3>
+        </div>
+      </div>
+
+      <div class="card-clase spinning">
+        <img src="../sources/spinning.jpg" alt="Spinning">
+        <div class="overlay">
+          <h3>Spinning</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion Tabla de horarios -->
+    <section class="horarios">
+      <h2>Horarios Semanales</h2>
+      <div class="tabla-horarios">
+        <table>
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Clase</th>
+              <th>Horario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lunes</td>
+              <td>CrossFit</td>
+              <td>08:00 - 09:00</td>
+            </tr>
+            <tr>
+              <td>Martes</td>
+              <td>Yoga</td>
+              <td>10:00 - 11:00</td>
+            </tr>
+            <tr>
+              <td>Miércoles</td>
+              <td>Spinning</td>
+              <td>18:00 - 19:00</td>
+            </tr>
+            <tr>
+              <td>Jueves</td>
+              <td>Musculación</td>
+              <td>20:00 - 21:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-contenido">
+
+    <div class="newsletter">
+      <h3>Suscribite al Newsletter</h3>
+      <form class="form-newsletter">
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirme</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <h3>Seguinos</h3>
+      <div class="iconos-redes">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="YouTube">📺</a>
+      </div>
+    </div>
+
+    <div class="mapa">
+      <h3>Encontranos</h3>
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3078%2C-24.1977%2C-65.3022%2C-24.1933&layer=mapnik"
+        width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""
+        aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+  </div>
+
+  <div class="footer-final">
+    <p>&copy; 2025 Gimnasio PowerFit. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,160 @@
+.galeria-clases {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Estilo base para las tarjetas */
+.card-clase {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 350px; /* alto fijo para uniformidad */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Aseguramos que las imágenes llenen bien la tarjeta */
+.card-clase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorta sin deformar */
+  display: block;
+}
+
+/* Efecto overlay */
+.card-clase .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filtros input {
+  display: none;
+}
+
+.filtros label {
+  background-color: #ddd;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.filtros input:checked + label {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Ocultar todo por defecto */
+.galeria .tarjeta {
+  display: none;
+}
+
+/* Mostrar todas si "Todos" está seleccionado */
+#todos:checked ~ .galeria .tarjeta {
+  display: block;
+}
+
+/* Mostrar según categoría */
+#musculacion:checked ~ .galeria .musculacion,
+#crossfit:checked ~ .galeria .crossfit,
+#yoga:checked ~ .galeria .yoga,
+#spinning:checked ~ .galeria .spinning {
+  display: block;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.tarjeta {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.tarjeta img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.tarjeta {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tarjeta img {
+  transition: transform 0.5s ease;
+}
+
+.tarjeta:hover img {
+  transform: scale(1.1);
+}
+
+.tarjeta::after {
+  content: attr(data-info);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover::after {
+  transform: translateY(0%);
+}
+/* ====== Tabla responsiva de horarios ====== */
+.horarios {
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.horarios table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.horarios th,
+.horarios td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.horarios th {
+  background: var(--color-principal);
+  color: white;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .horarios table {
+    font-size: 0.9rem;
+  }
+}

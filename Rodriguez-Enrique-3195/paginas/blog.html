@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog de Fitness</title>
+  <link rel="stylesheet" href="../estilos/blog.css" />
+  <link rel="stylesheet" href="../estilos/menu-footer.css">
+</head>
+<body>
+   <!-- Menu -->
+   <header class="main-header">
+    <div class="logo" ><a href="../index.html">🏋️ PowerFit</a></div>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li class="menu-item">       
+          <a href="clases.html">Clases</a>
+          <ul class="submenu">
+            <li><a href="clases.html#musculacion">Musculación</a></li>
+            <li><a href="clases.html#crossfit">CrossFit</a></li>
+            <li><a href="Clases.html">Yoga</a></li>
+            <li><a href="clases.html#spinning">Spinning</a></li>
+          </ul> 
+        </li>
+        <li><a href="entrenadores.html">Entrenadores</a></li>
+        <li><a href="precios.html">Precios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Seccion blog -->
+  <header class="blog-header">
+    <h1>Blog de Fitness</h1>
+    <div class="filtros">
+      <input type="radio" name="categoria" id="todos" checked>
+      <label for="todos">Todos</label>
+      <input type="radio" name="categoria" id="nutricion">
+      <label for="nutricion">Nutrición</label>
+      <input type="radio" name="categoria" id="rutinas">
+      <label for="rutinas">Rutinas</label>
+      <input type="radio" name="categoria" id="salud">
+      <label for="salud">Salud</label>
+    </div>
+  </header>
+
+  <section class="grid-blog">
+    <article class="post nutricion">
+      <h2>Alimentos que potencian tu entrenamiento</h2>
+      <p>Comer bien es tan importante como entrenar. Te contamos qué alimentos deberías incorporar...</p>
+    </article>
+
+    <article class="post rutinas">
+      <h2>Rutina Full Body para principiantes</h2>
+      <p>Ideal para quienes recién comienzan: simple, efectiva y sin equipamiento.</p>
+    </article>
+
+    <article class="post salud">
+      <h2>Importancia del descanso</h2>
+      <p>Dormir bien es clave para ganar masa muscular y evitar lesiones. Te lo explicamos.</p>
+    </article>
+
+    <article class="post nutricion">
+      <h2>5 Snacks saludables para después del gym</h2>
+      <p>Opciones fáciles, ricas y nutritivas para reponer energía.</p>
+    </article>
+  </section>
+
+  <section class="comentarios">
+    <h3>Comentarios</h3>
+
+    <div class="comentario">
+      <div class="avatar"></div>
+      <div class="contenido">
+        <strong>Sofía</strong>
+        <p>Muy buenos consejos, me gustó mucho el enfoque en la nutrición.</p>
+      </div>
+    </div>
+
+    <div class="comentario">
+      <div class="avatar"></div>
+      <div class="contenido">
+        <strong>Lautaro</strong>
+        <p>¿Podrían subir una rutina intermedia también? Gracias!</p>
+      </div>
+    </div>
+  </section>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-contenido">
+  
+      <div class="newsletter">
+        <h3>Suscribite al Newsletter</h3>
+        <form class="form-newsletter">
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirme</button>
+        </form>
+      </div>
+  
+      <div class="redes">
+        <h3>Seguinos</h3>
+        <div class="iconos-redes">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="YouTube">📺</a>
+        </div>
+      </div>
+  
+      <div class="mapa">
+        <h3>Encontranos</h3>
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-65.3078%2C-24.1977%2C-65.3022%2C-24.1933&layer=mapnik"
+          width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen=""
+          aria-hidden="false" tabindex="0"></iframe>
+      </div>
+  
+    </div>
+  
+    <div class="footer-final">
+      <p>&copy; 2025 Gimnasio PowerFit. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.animado {
+  animation: fadeIn 2s ease-in-out;
+}
+.video-wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-wrapper iframe {
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.77vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* No bloquea los clicks en el overlay */
+}
+
+/* CLASES DESTACADAS */
+.clases-destacadas {
+  padding: 4rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+.clases-destacadas h2 {
+  font-size: 2rem;
+  color: var(--color-acento);
+  margin-bottom: 2rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--color-gris);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 1rem;
+}
+
+/* CONTADOR */
+.contador {
+  background: var(--color-acento);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 2rem;
+  animation: contar 3s ease-in-out infinite alternate;
+}
+
+@keyframes contar {
+  0% { letter-spacing: 1px; }
+  100% { letter-spacing: 5px; }
+}
+
+/* TESTIMONIOS */
+.testimonios {
+  padding: 4rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+.testimonios h2 {
+  color: var(--color-acento);
+  margin-bottom: 2rem;
+}
+
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+}
+
+.testimonio {
+  min-width: 300px;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  padding: 2rem;
+  background: var(--color-gris);
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
